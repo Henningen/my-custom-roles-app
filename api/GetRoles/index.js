@@ -16,16 +16,18 @@ module.exports = async function (context, req) {
         }
     }
 	
-	 if (req.user._json.groups.indexOf('a86753b8-e17d-4d83-a57b-ce577629c481') > -1) {
+/*
+	if (req.user._json.groups.indexOf('a86753b8-e17d-4d83-a57b-ce577629c481') > -1) {
         //In Group
 		roles.push("admin");
     } else {
         //Not in Group
     }
+*/
 	
 	
     roles.push("testrolle");
-	context.log("The function has executed.");
+	//context.log("The function has executed.");
     context.res.json({
         roles
     });
