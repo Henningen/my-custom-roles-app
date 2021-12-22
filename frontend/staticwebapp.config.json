@@ -16,8 +16,8 @@
                 "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
                 "registration": {
                     "openIdIssuer": "https://login.microsoftonline.com/c9baa630-b112-44b1-b7b6-5fea9279a87a",
-                    "clientIdSettingName": "4e04f6ad-5504-480d-94ab-c61cda69416e",
-                    "clientSecretSettingName": "ucl7Q~8ZGuLbYZZd66FlB8tUc7dmckULcD7iR"
+                    "clientIdSettingName": "AADClientID",
+                    "clientSecretSettingName": "AADSecret"
                 },
                 "login": {
                     "loginParameters": [
