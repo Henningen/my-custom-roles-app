@@ -11,11 +11,13 @@ module.exports = async function (context, req) {
     const roles = [];
     
     for (const [role, groupId] of Object.entries(roleGroupMappings)) {
-        if (await isUserInGroup(groupId, user.accessToken)) {
+        console.print(role);
+        if (await isUserInGroup(groupId, user.accessToken)) {        
+            console.print(role);
             roles.push(role);
         }
     }
-    roles.push("admin");
+    roles.push("testrolle");
 
     context.res.json({
         roles
