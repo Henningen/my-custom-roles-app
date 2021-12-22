@@ -13,7 +13,7 @@
         "rolesSource": "/api/GetRoles",
         "identityProviders": {
             "azureActiveDirectory": {
-                "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+                "userDetailsClaim":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
                 "registration": {
                     "openIdIssuer": "https://login.microsoftonline.com/c9baa630-b112-44b1-b7b6-5fea9279a87a",
                     "clientIdSettingName": "AADClientID",
