@@ -15,6 +15,11 @@ module.exports = async function (context, req) {
             roles.push(role);
         }
     }
+
+	user = getUser():
+	if (user.clientPrincipal.claims.roles.indexOf('admin') > -1 ){
+		roles.push("admin");
+	}
 	
 /*
 	if (req.user._json.groups.indexOf('a86753b8-e17d-4d83-a57b-ce577629c481') > -1) {
@@ -50,4 +55,12 @@ async function isUserInGroup(groupId, bearerToken) {
     const graphResponse = await response.json();
     const matchingGroups = graphResponse.value.filter(group => group.id === groupId);
     return matchingGroups.length > 0;
+}
+
+
+async function getUser() {
+  const response = await fetch('/api/user');
+  const payload = await response.json();
+  const { clientPrincipal } = payload;
+  return clientPrincipal;
 }
