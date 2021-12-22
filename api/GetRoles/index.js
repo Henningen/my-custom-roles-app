@@ -16,7 +16,7 @@ module.exports = async function (context, req) {
         }
     }
     roles.push("testrolle");
-
+	context.log("The function has executed.");
     context.res.json({
         roles
     });
