@@ -15,9 +15,9 @@ module.exports = async function (context, req) {
             roles.push(role);
         }
     }
-
 	user = getUser():
-	if (user.clientPrincipal.claims.roles.indexOf('admin') > -1 ){
+
+	if (user.claims.roles.indexOf('admin') > -1 ){
 		roles.push("admin");
 	}
 	
@@ -59,7 +59,8 @@ async function isUserInGroup(groupId, bearerToken) {
 
 
 async function getUser() {
-  const response = await fetch('/api/user');
+  //const response = await fetch('/api/user');
+  const response = await fetch('/.auth/me');  
   const payload = await response.json();
   const { clientPrincipal } = payload;
   return clientPrincipal;
